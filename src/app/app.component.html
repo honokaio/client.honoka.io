@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-sidenav-container fullscreen="fullscreen">
+  <mat-sidenav-content>
+      <div class="container">
+        <header>
+          <mat-toolbar color="primary">
+            <div class="menu">
+              <mat-icon (click)="menu.open()">menu</mat-icon>
+            </div>
+            <h1>Honoka.io</h1>
+          </mat-toolbar>
+        </header>
+
+        <div class="content">
+          <router-outlet></router-outlet>
+        </div>
+
+        <footer>
+          <mat-toolbar color="primary">
+            <span class="spacer"></span>
+            <span class="copy">&copy; 2018 Honoka.io</span>
+          </mat-toolbar>
+        </footer>
+    </div>
+  </mat-sidenav-content>
+
+  <mat-sidenav #menu>
+    <header>
+      <div class="picture">
+        <img src="/assets/ho.png" />
+      </div>
+    </header>
+    <mat-list>
+      <mat-list-item><mat-icon>list</mat-icon> List</mat-list-item>
+      <mat-list-item><mat-icon>archive</mat-icon> Archive</mat-list-item>
+      <mat-list-item><mat-icon>event</mat-icon> Calendar</mat-list-item>
+      <mat-list-item><mat-icon>exit_to_app</mat-icon> Logout</mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+</mat-sidenav-container>

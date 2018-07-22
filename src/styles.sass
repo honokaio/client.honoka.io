@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/theming'
+@include mat-core()
+
+$primary: mat-palette($mat-orange)
+$accent: mat-palette($mat-amber)
+$warn: mat-palette($mat-deep-orange)
+$default: mat-light-theme($primary, $accent, $warn)
+
+@include angular-material-theme($default)
+
+/* Common */
+body
+  margin: 0
+
